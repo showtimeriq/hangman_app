@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# How to play
 
-Things you may want to cover:
+https://en.wikipedia.org/wiki/Hangman_(game)
 
-* Ruby version
+# Description 
 
-* System dependencies
+This is a simple word guessing application I built using Ruby on Rails! this game can be played by yourself or shared with friends and family with the link after creating the game.
 
-* Configuration
+# Deploying the app
+Click 
+https://secret-sierra-83088.herokuapp.com/
 
-* Database creation
 
-* Database initialization
+# Creating a Game (Demo)
 
-* How to run the test suite
+  ![App Demo](videos/hangman_app.gif) / ![](videos/hangman_app.gif)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
