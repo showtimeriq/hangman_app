@@ -5,8 +5,8 @@ class GamesController < ApplicationController
     end
 
     def create 
-        selected_word =  params["game"]["word"]
-        if selected_word
+        selected_word =  params["game"]["word"].strip.downcase
+        if !selected_word.blank?
             num_chars = selected_word.length
             inital_board_layout = "_ " * num_chars
             game = Game.create(name: selected_word, remaining_num_guesses: 6, guessed_letters: inital_board_layout )
@@ -25,7 +25,7 @@ class GamesController < ApplicationController
 
     def update 
         current_game = Game.find(params["id"].to_i)
-        guessed_letter = params["game"]["name"].strip
+        guessed_letter = params["game"]["name"].strip.downcase
         if current_game.remaining_num_guesses <= -1
             redirect_to current_game, notice: "Youve maxed out your guesses!"
             return
