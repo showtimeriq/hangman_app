@@ -10,7 +10,7 @@ class GamesController < ApplicationController
             num_chars = selected_word.length
             inital_board_layout = "_ " * num_chars
             game = Game.create(name: selected_word, remaining_num_guesses: 6, guessed_letters: inital_board_layout )
-        redirect_to :new_game, notice: "Game created with word #{selected_word}!. sharablelink: http://localhost:3000/games/#{game.id}"
+        redirect_to :new_game, notice: "Game created with word #{selected_word}!. sharablelink: https://secret-sierra-83088.herokuapp.com/games/#{game.id}"
         end
     end
 
