@@ -1,0 +1,9 @@
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+<%= form_tag(games_path, :method => "post") do %>
+    <%= text_field(:game, :word) %>
+    <%= submit_tag("Create Game") %>
+  <% end %>
